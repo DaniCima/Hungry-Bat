@@ -37,7 +37,7 @@ window.onload = function () {
     const bat = new Bat();
     const moth = new Moth(150, 250, 20, 20, "./images/moth.jpg");
     const moth1 = new Moth( 500, 300, 20,20, "./images/moth2.png");
-    const moth2 = new Moth(1000,600,20,20,)
+    // const moth2 = new Moth(1000,600,20,20,)
 
 
     document.addEventListener("keydown", (event) => {
