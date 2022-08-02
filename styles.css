@@ -1,7 +1,7 @@
 
 #first-page {
 background-image: url("./images/fondo3.webp");
-background-position: top left;
+background-size: cover;
 background-repeat: no-repeat;
 width: 1100px;
 height: 700px;
@@ -21,4 +21,7 @@ height: 700px;
 }
 .text {
     color: white;
+}
+#game-over {
+    background-image: url("./images/fondo3.webp");
 }

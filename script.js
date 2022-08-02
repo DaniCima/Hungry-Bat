@@ -1,5 +1,6 @@
 // let currentGame;
-
+let restartButt = document.getElementById("re-start");
+let scoreHTML = document.getElementById("score");
 let canvas = document.querySelector("canvas");
 const ctx = canvas.getContext('2d');
 let startButton = document.getElementById("start-button");
@@ -32,8 +33,14 @@ window.onload = function () {
         checkGameOver();
     });
     // currentGame = new Game();
+    
 
-  
+    restartButt.addEventListener("click", ()  => {
+      gameOver = false;
+      startGame();
+      checkGameOver();
+
+    })
     // let batX += batSpeedX;
     // let batY += batSpeedY;
     const bat = new Bat();
@@ -41,7 +48,13 @@ window.onload = function () {
     moth0 = new Moth(300, 250, 20, 20, "./images/moth.png");
     moth1 = new Moth(500, 300, 20,20, "./images/moth2.png");
     moth2 = new Moth(1000,600,20,20,"./images/moth2.png");
-    const moths = [moth0, moth1, moth2];
+    moth3 = new Moth(700, 250, 20, 20, "./images/moth.png");
+    moth4 = new Moth(500,400, 20,20, "./images/moth2.png");
+    moth5 = new Moth(1000,600,20,20,"./images/moth2.png");
+    moth6 = new Moth(30, 500, 20, 20, "./images/moth.png");
+    moth7 = new Moth(120, 320, 20,20, "./images/moth2.png");
+    moth8 = new Moth(170,60,20,20,"./images/moth2.png");
+    const moths = [moth0, moth1, moth2,moth3,moth4,moth5,moth6,moth7,moth8];
     
     let keysPressed= {};
     document.addEventListener("keydown", (event) => {
@@ -110,7 +123,17 @@ window.onload = function () {
       }
        // audio.play();     
         
-        moths.forEach(moth => moth.drawMoth());
+        moths.forEach(moth => {
+          moth.drawMoth();
+          if (bat.x + bat.width >= moth.x && bat.x <= moth.x + moth.width && bat.y + bat.height >= moth.y && bat.y <= moth.y + moth.height) {
+            moth.x = -500;
+            score +=10;
+          }
+        // currentGame.moth.createMoths();
+    
+       
+    updateScore();
+        });
 
         // if(intervalId % 80 === 0){ 
         // moth0.moveMoths()
@@ -122,7 +145,10 @@ window.onload = function () {
       detectCollision();
 
         if (gameOver === true) {
-            
+          firstPage.style.display = 'none';
+          finishPage.style.display = 'block';
+          canvas.style.display = 'none';
+          scoreHTML.innerText = score;
             cancelAnimationFrame(intervalId);
         
         } else {
@@ -131,19 +157,13 @@ window.onload = function () {
     }
 
     function detectCollision() {
-        moths.forEach(moth => {
-            if (bat.x + bat.width >= moth.x && bat.x <= moth.x - moth.width && bat.y + bat.height <= moth.y && bat.y >= moth.y + moth.height) {
-                moth.x = -500;
-                score +=10;
-              }
-            // currentGame.moth.createMoths();
-        })
-        updateScore();
+       
+     
     }
     function checkGameOver() {
         setTimeout(() => {
             gameOver = true;
-        },3000);
+        },30000);
         // setTimeout(() => {
         //     if (score<170) false
         // },12000);
@@ -151,5 +171,5 @@ window.onload = function () {
         //     if (score<300) false
         // },18000);
     }
-    f
+    
 }
