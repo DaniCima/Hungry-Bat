@@ -21,35 +21,10 @@ class Moth {
         ctx.drawImage(mothImg,this.x, this.y, this.width, this.height);
     }
 
-    // createMoths () {
-    //   let minHeight = 10; // set params for the obstacles
-    //   let maxHeight = 550;
-    //   let minWidth = 20; // set params for the obstacles
-    //   let maxWidth = 200;
-    //   this.x = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
-    //   this.y = Math.floor(Math.random() * (maxWidth - minWidth + 1) + minWidth);
-    //   if (score==20) {
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //   } else if (score==40) {
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //   } else {
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth.png"));
-    //     moths.push(new Moth(this.x, this.y, 20, 20, "./images/moth2.png"));
-    //   }
-    // }
-
     moveMoths() {
 
-      // this.x= Math.floor(Math.random()*1100)+ 15;
-      // this.y= Math.floor(Math.random()*700)+ 15;
+      this.x= Math.floor(Math.random()*1100)+ 15;
+      this.y= Math.floor(Math.random()*700)+ 15;
      }
 }
 
@@ -59,10 +34,10 @@ class Bat {
       this.y = 50;
       // this.speedX=0;
       // this.speedY=0;
-      this.width = 50;
-      this.height = 50;
+      this.width = 60;
+      this.height = 60;
       this.flapping = true;
-      this.src= "./images/murci2mirror.png";
+      this.src= "./images/murci1.png";;
     }
     
     drawBat(){

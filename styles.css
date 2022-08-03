@@ -5,8 +5,11 @@ background-size: cover;
 background-repeat: no-repeat;
 width: 1100px;
 height: 700px;
+display:flex;
+justify-content: center;
+align-items: center;
 }
-#start-button {
+.butt {
     background-color: transparent;
     color: white;
     border: 3px solid #4CAF50;
@@ -15,13 +18,26 @@ height: 700px;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
 }
 .text {
     color: white;
 }
 #game-over {
     background-image: url("./images/fondo3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1100px;
+    height: 700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+h1, h3 {
+    color: white;
+}
+#game-over img{
+    width: 50px;
+    height: 110px;
+    position: left;
+   
 }
