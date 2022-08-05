@@ -1,57 +1,65 @@
-@import url("//fonts.googleapis.com/css?family=Ruslan+Display"); 
+@import url("//fonts.googleapis.com/css?family=Ruslan+Display");
 
 #first-page {
-background-image: url("./images/fondo3.webp");
-background-size: cover;
-background-repeat: no-repeat;
-width: 1100px;
-height: 700px;
-}
-/* #first-page img {
-    position: relative;
-    left: 10px;
-    top: 10px;
-} */
-#start-button, #re-start {
-    background-color: transparent;
-    color: white;
-    border: 3px solid #336934;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
+  background-image: url("./images/fondo3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1100px;
+  height: 700px;
 }
 
-.butt, #first-page, #game-over {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#start-button,
+#re-start {
+  background-color: transparent;
+  color: white;
+  border: 3px solid #336934;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.butt,
+#first-page,
+#game-over {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .text {
-    color: white;
-    font-family:'Franklin Gothic Medium';
+  color: white;
+  font-family: "Franklin Gothic Medium";
 }
 #game-over {
-    background-image: url("./images/fondo3.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1100px;
-    height: 700px;
+  background-image: url("./images/fondo3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1100px;
+  height: 700px;
+  margin: 0;
 }
 h1 {
-    color: white;
-    font-family: "Ruslan Display";
-    font-size: 80px;
+  color: white;
+  font-family: "Ruslan Display";
+  font-size: 80px;
 }
-h2, h3 {
-    color: white;
+h2,
+h3 {
+  color: white;
 }
-#game-over img{
-    width: 50px;
-    height: 110px;
-    /* position: relative;
+#game-over h1,
+#game-over h2 {
+  margin-left: 335px;
+  margin-top: 0;
+}
+#game-over img {
+  width: 50px;
+  height: 110px;
+  margin-top: 212px;
+  margin-left: 932px;
+  /* position: relative;
     left: 10px;
     top: 10px; */
 }

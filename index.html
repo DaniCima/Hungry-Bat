@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hungry Bat</title>
-    <link rel="stylesheet" href="./styles.css" >
-</head>
-<body >
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <div id="first-page">
-        <img src="./images/murci&moth.png" alt="intro bat">
-        <h1>HUNGRY ASS BAT</h1>
-        <div class = "butt">
+      <div class="first-img">
+        <img src="./images/murci&moth.png" alt="intro bat" />
+      </div>
+      <h1>HUNGRY AS BAT</h1>
+      <div class="butt">
         <button id="start-button">Dinner Time</button>
-        </div>
-        <h2 class = "text">Use the arrows to fly around!</h2>
-        <h3 class = "text">**Find the special fly**</h3>
-        
+      </div>
+      <h2 class="text">Use the arrows to fly around!</h2>
+      <!-- <h3 class="text">**Find the special fly**</h3> -->
     </div>
     <div>
-    <canvas id="Canvas" width="1000px" height ="600px"></canvas>
+      <canvas id="Canvas" width="1000px" height="600px"></canvas>
     </div>
     <div id="game-over">
-        <img src="./images/murci-hang.png" alt="hanging bat">
-        <h1>  Game over!</h1>
-        <h2 class = "text">SCORE : <span id= "score">0</span></h2>
-        <div class = "butt">
-        <button id = "re-start"> Fly again</button>
-        </div>
+      <div class="hanging">
+        <img src="./images/murci-hang.png" alt="hanging bat" />
+      </div>
+      <h1>Game over!</h1>
+      <h2 class="text">SCORE : <span id="score">0</span></h2>
+      <div class="butt">
+        <button id="re-start">Fly again</button>
+      </div>
     </div>
-    <script src = "game.js"></script>
-    <script src = "script.js"></script>
-</body>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

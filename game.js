@@ -22,7 +22,6 @@ class Moth {
     }
 
     moveMoths() {
-
       this.x= Math.floor(Math.random()*1100)+ 15;
       this.y= Math.floor(Math.random()*700)+ 15;
      }
@@ -44,16 +43,5 @@ class Bat {
       const batImg = new Image();
       batImg.src = this.src;
       ctx.drawImage(batImg, this.x, this.y, this.width, this.height);
-      
-    }
-
-    movebat(keyCode){
-      console.log('x', this.x);
-      console.log('y', this.y);
-      ctx.clearRect(this.x, this.y, this.width, this.height);
-      // this.x += this.speedX;
-      // this.y += this.speedY;
-      
-      
     }
   }
