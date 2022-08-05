@@ -10,14 +10,14 @@ let score = 0;
 let intervalId = 0;
 let time = 0;
 let left = false;
-let audio = new Audio("./images/0000971.mp3");
+let audio = new Audio("images/0000971.mp3");
 audio.volume = 0.1;
 
 let img = new Image();
-img.src = "../images/fondo2.jpg";
+img.src = "images/fondo2.jpg";
 
 // let bat = new Image();
-// bat.src = "../images/murci1.png"
+// bat.src = ".images/murci1.png"
 // let batSpeedX = 5;
 // let batSpeedY = 5;
 
@@ -47,15 +47,15 @@ window.onload = function () {
   const bats = [bat];
   //,bat1
 
-  moth0 = new Moth(300, 250, 30, 30, "./images/moth.png");
-  moth1 = new Moth(500, 300, 30, 30, "./images/moth2.png");
-  moth2 = new Moth(1000, 600, 30, 30, "./images/moth3.png");
-  moth3 = new Moth(700, 250, 30, 30, "./images/butter.png");
-  moth4 = new Moth(500, 400, 30, 30, "./images/butterfly1.png");
-  moth5 = new Moth(1000, 600, 30, 30, "./images/whiteMoth.png");
-  moth6 = new Moth(30, 500, 30, 30, "./images/moth.png");
-  moth7 = new Moth(130, 330, 30, 30, "./images/moth2.png");
-  moth8 = new Moth(170, 60, 30, 30, "./images/moth2.png");
+  moth0 = new Moth(300, 250, 30, 30, "images/moth.png");
+  moth1 = new Moth(500, 300, 30, 30, "images/moth2.png");
+  moth2 = new Moth(1000, 600, 30, 30, "images/moth3.png");
+  moth3 = new Moth(700, 250, 30, 30, "images/butter.png");
+  moth4 = new Moth(500, 400, 30, 30, "images/butterfly1.png");
+  moth5 = new Moth(1000, 600, 30, 30, "images/whiteMoth.png");
+  moth6 = new Moth(30, 500, 30, 30, "images/moth.png");
+  moth7 = new Moth(130, 330, 30, 30, "images/moth2.png");
+  moth8 = new Moth(170, 60, 30, 30, "images/moth2.png");
   const moths = [moth0, moth1, moth2, moth3, moth4, moth5, moth6, moth7, moth8];
 
   let keysPressed = {};
@@ -151,16 +151,16 @@ window.onload = function () {
       bat.drawBat();
 
       if (bat.flapping) {
-        bat.src = "./images/murci1.png";
+        bat.src = "images/murci1.png";
       } else {
-        bat.src = "./images/murci2mirror.png";
+        bat.src = "images/murci2mirror.png";
       }
     });
 
     // if (bat.flapping && left) {
-    //   bat.src = "./images/murci-reverse.png";
+    //   bat.src = "images/murci-reverse.png";
     // } else {
-    //   bat.src = "./images/murci3.png";
+    //   bat.src = "images/murci3.png";
     // }
     audio.play();
 
@@ -201,14 +201,14 @@ window.onload = function () {
           randomY,
           30,
           30,
-          "./images/butterfly1.png"
+          "images/butterfly1.png"
         );
         let newMoth2 = new Moth(
           randomX1,
           randomY1,
           30,
           30,
-          "./images/whiteMoth.png"
+          "images/whiteMoth.png"
         );
 
         if (score < 130) {
