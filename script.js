@@ -11,7 +11,11 @@ let intervalId = 0;
 let time = 0;
 let left = false;
 let audio = new Audio("images/0000971.mp3");
+let audio1 = new Audio("images/0004469.mp3");
+let audio2 = new Audio("images/cuacua.mp3");
 audio.volume = 0.1;
+audio1.volume = 0.2;
+audio2.volume = 0.3;
 
 let img = new Image();
 img.src = "images/fondo2.jpg";
@@ -120,6 +124,55 @@ window.onload = function () {
   }, 300);
 
   function updateScore() {
+    if (+time >= 10 && +time <= 13 && +score < 30) {
+      audio1.play();
+      setTimeout(() => {
+        audio1.pause();
+        audio.currentTime = 0;
+      }, 7000);
+      ctx.font = "30px serif";
+      ctx.fillStyle = "white";
+      ctx.fillText(
+        `You are starving!! Need ${3 - score / 10} juicy flies! ${
+          30 - time
+        } seconds left`,
+        300,
+        550
+      );
+    }
+    if (+time >= 40 && +time <= 43 && +score < 300) {
+      audio1.play();
+      setTimeout(() => {
+        audio1.pause();
+        audio.currentTime = 0;
+      }, 7000);
+      ctx.font = "30px serif";
+      ctx.fillStyle = "white";
+      ctx.fillText(
+        `You are starving!! Need ${30 - score / 10} juicy flies! ${
+          65 - time
+        } seconds left`,
+        300,
+        550
+      );
+    }
+    if (+time >= 90 && +time <= 93 && +score < 700) {
+      audio1.play();
+      setTimeout(() => {
+        audio1.pause();
+        audio.currentTime = 0;
+      }, 7000);
+      ctx.font = "30px serif";
+      ctx.fillStyle = "white";
+      ctx.fillText(
+        `You are starving!! Need ${70 - score / 10} juicy flies! ${
+          120 - time
+        } seconds left`,
+        300,
+        550
+      );
+    }
+
     ctx.font = "20px serif";
     ctx.fillStyle = "white";
     ctx.fillText(`Score: ${score}`, 550, 50);
@@ -128,19 +181,7 @@ window.onload = function () {
     ctx.fillText(`Time: ${time}`, 650, 50);
   }
 
-  function warning() {
-    ctx.font = "30px serif";
-    ctx.fillStyle = "white";
-    ctx.fillText(`You are starving!! Need juici ${score / 10} flies`, 550, 50);
-  }
-
   function startGame() {
-    setTimeout(() => {
-      if (score < 25) {
-        warning();
-      }
-    }, 15000);
-
     // intervalId += 1; // increment
     firstPage.style.display = "none";
     finishPage.style.display = "none";
@@ -234,6 +275,7 @@ window.onload = function () {
     // detectCollision();
 
     if (gameOver === true) {
+      audio2.play();
       firstPage.style.display = "none";
       finishPage.style.display = "block";
       canvas.style.display = "none";
